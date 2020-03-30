@@ -1,0 +1,26 @@
+{
+  "name": "ToC Medium",
+  "version": "1.0",
+  "description": "Table of contents generator for Medium",
+  "manifest_version": 2,
+  "author": "Vinicius De Antoni",
+  "short_name": "toc-medium",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/p/*/edit"],
+      "css": ["tooltip.css"],
+      "js": ["tooltip.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/toc-medium16.png",
+    "32": "images/toc-medium32.png",
+    "48": "images/toc-medium48.png",
+    "128": "images/toc-medium128.png"
+  }
+}
