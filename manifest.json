@@ -1,11 +1,11 @@
 {
   "name": "ToC Medium",
-  "version": "1.0",
+  "version": "0.1",
   "description": "Table of contents generator for Medium",
   "manifest_version": 2,
   "author": "Vinicius De Antoni",
   "short_name": "toc-medium",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["activeTab"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
