@@ -1,25 +1,27 @@
 (() => {
-  function simulateKeydown(el, keyCode) {
+  const simulateKeydown = (el, keyCode) => {
     const keyboardEvent = new KeyboardEvent("keydown", {
       bubbles: true,
       cancelable: true,
-      keyCode
+      keyCode,
     });
     return el.dispatchEvent(keyboardEvent);
-  }
+  };
 
   const generate = () => {
     const headingList = [...document.querySelectorAll("h3[name], h4[name]")];
 
     return headingList
       .filter(
-        headingTag =>
+        (headingTag) =>
           !headingTag.classList.contains("graf--title") &&
           !headingTag.classList.contains("graf--subtitle")
       )
-      .map(headingTag => {
+      .map((headingTag) => {
         let bullet;
         switch (headingTag.tagName.toLowerCase()) {
+          case "h1":
+          case "h2":
           case "h3":
             bullet = `·`;
             break;
@@ -44,11 +46,15 @@
     );
 
     if (!tooltipToggleMenu || !tooltipMenu || !addEmbedButton) {
-      setTimeout(inject, 100);
       return;
     }
 
-    const handleAddToCClick = e => {
+    const toCButton = document.querySelector("[data-action='inline-menu-toc']");
+    if (toCButton) {
+      return;
+    }
+
+    const handleAddToCClick = (e) => {
       const container = document.querySelector(".is-selected");
       tooltipToggleMenu.click();
 
@@ -76,5 +82,5 @@
     tooltipMenu.appendChild(addToCButton);
   };
 
-  inject();
+  setInterval(inject, 500);
 })();
