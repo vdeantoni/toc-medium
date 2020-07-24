@@ -40,14 +40,17 @@
     const tooltipToggleMenu = document.querySelector(
       "[data-action=inline-menu]"
     );
+    const tooltip = document.querySelector(".inlineTooltip");
     const tooltipMenu = document.querySelector(".inlineTooltip-menu");
     const addEmbedButton = document.querySelector(
       ".inlineTooltip-menu [title='Add an embed']"
     );
 
-    if (!tooltipToggleMenu || !tooltipMenu || !addEmbedButton) {
+    if (!tooltip || !tooltipToggleMenu || !tooltipMenu || !addEmbedButton) {
       return;
     }
+
+    tooltip.style.width = "auto";
 
     const toCButton = document.querySelector("[data-action='inline-menu-toc']");
     if (toCButton) {
