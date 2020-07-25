@@ -1,7 +1,7 @@
 {
-  "name": "ToC Medium",
-  "version": "0.3",
-  "description": "Table of contents generator for Medium",
+  "name": "TOC Medium",
+  "version": "0.4",
+  "description": "Table Of Contents generator for Medium",
   "manifest_version": 2,
   "author": "Vinicius De Antoni",
   "short_name": "toc-medium",
@@ -17,7 +17,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://medium.com/p/*/edit"
+        "https://medium.com/p/*/edit",
+        "https://medium.com/new-story"
       ],
       "css": [
         "tooltip.css"
