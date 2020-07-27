@@ -1,4 +1,6 @@
-# ToC Medium
+![Logo](https://raw.githubusercontent.com/vdeantoni/toc-medium/master/images/toc-medium128.png)
+
+# TOC Medium
 
 Chrome extension that generates table of contents for Medium articles.
 
