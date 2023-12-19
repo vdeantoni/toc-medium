@@ -15,7 +15,7 @@
       .filter(
         (headingTag) =>
           !headingTag.classList.contains("graf--title") &&
-          !headingTag.classList.contains("graf--subtitle")
+          !headingTag.classList.contains("graf--subtitle"),
       )
       .map((headingTag) => {
         let bullet;
@@ -31,19 +31,19 @@
         }
 
         return `${bullet} <a href="#${headingTag.getAttribute(
-          "name"
+          "name",
         )}" title="${headingTag.textContent}">${headingTag.textContent}</a>`;
       });
   };
 
   const inject = () => {
     const tooltipToggleMenu = document.querySelector(
-      "[data-action=inline-menu]"
+      "[data-action=inline-menu]",
     );
     const tooltip = document.querySelector(".inlineTooltip");
     const tooltipMenu = document.querySelector(".inlineTooltip-menu");
     const addEmbedButton = document.querySelector(
-      ".inlineTooltip-menu [title='Add an embed']"
+      ".inlineTooltip-menu [title='Add an embed']",
     );
 
     if (!tooltip || !tooltipToggleMenu || !tooltipMenu || !addEmbedButton) {
@@ -76,7 +76,7 @@
     addToCButton.setAttribute("data-action", "inline-menu-toc");
     addToCButton.setAttribute(
       "data-action-value",
-      "Generate a table of contents"
+      "Generate a table of contents",
     );
     addToCButton.setAttribute("data-default-value", "Table of contents");
     addToCButton.innerHTML = "⋮";

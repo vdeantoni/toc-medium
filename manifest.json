@@ -2,29 +2,19 @@
   "name": "TOC Medium",
   "version": "0.5",
   "description": "Table Of Contents generator for Medium stories",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "author": "Vinicius De Antoni",
   "short_name": "toc-medium",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "service_worker.js",
+    "type": "module"
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://medium.com/*"
-      ],
-      "css": [
-        "tooltip.css"
-      ],
-      "js": [
-        "tooltip.js"
-      ]
+      "matches": ["https://medium.com/*"],
+      "css": ["tooltip.css"],
+      "js": ["tooltip.js"]
     }
   ],
   "icons": {
