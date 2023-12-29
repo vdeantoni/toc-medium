@@ -80,6 +80,9 @@
     );
     addToCButton.setAttribute("data-default-value", "Table of contents");
     addToCButton.innerHTML = "⋮";
+    addToCButton.style.color = "rgb(26, 137, 23)";
+    addToCButton.style.border = "1px solid";
+    addToCButton.style.fontWeight = "bold";
     addToCButton.addEventListener("click", handleAddToCClick);
 
     tooltipMenu.appendChild(addToCButton);
