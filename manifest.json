@@ -5,7 +5,7 @@
   "manifest_version": 3,
   "author": "Vinicius De Antoni",
   "short_name": "toc-medium",
-  "permissions": ["activeTab"],
+  "permissions": [],
   "background": {
     "service_worker": "service_worker.js",
     "type": "module"
